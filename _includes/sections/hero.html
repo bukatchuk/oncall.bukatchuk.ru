@@ -1,0 +1,15 @@
+<section class="hero">
+  <div class="hero__grid" aria-hidden="true"></div>
+  <div class="hero__in">
+    <div class="eyebrow">{{ d.eyebrow }}</div>
+    <h1>{{ d.title_html }}</h1>
+    <p class="hero__sub">{{ d.lead }}</p>
+    <div class="btns">
+      {%- for b in d.buttons %}
+      <a class="btn {% if b.primary %}btn--primary{% else %}btn--ghost{% endif %}" href="{{ b.href }}">{{ b.text }}</a>
+      {%- endfor %}
+    </div>
+  </div>
+  <span class="hero__corner hero__corner--l">{{ d.corner_left }}</span>
+  <span class="hero__corner hero__corner--r">{{ d.corner_right }}</span>
+</section>

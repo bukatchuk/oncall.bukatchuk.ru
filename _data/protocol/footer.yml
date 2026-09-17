@@ -1,0 +1,26 @@
+# Подвал страницы «Протокол»
+columns:
+  - title: "Пакет"
+    html: "<p><a href=\"#what\">Что внутри</a><br><a href=\"#price\">Цена</a><br><a href=\"#guar\">Гарантия</a><br><a href=\"#who\">Кому не нужно</a></p>"
+  - title: "Автор"
+    html: "<p><a href=\"https://habr.com/ru/articles/1078876/\" target=\"_blank\" rel=\"noopener\">Разбор аварии на Хабре</a><br><a href=\"https://github.com/olegbukatchuk\" target=\"_blank\" rel=\"noopener\">github.com/olegbukatchuk</a><br><a href=\"https://t.me/bukatchuk\" target=\"_blank\" rel=\"noopener\">t.me/bukatchuk</a></p>"
+  - title: "Документы"
+    html: "<p><span class=\"ph\">[ИП / ИНН / ОГРНИП]</span><br><a href=\"/offer/\">Оферта</a><br><a href=\"/privacy/\">Политика персональных данных</a></p>"
+  - title: "Если нужен стенд"
+    html: "<p><a href=\"/\">«Дежурство без паники»</a> — десять аварий под таймером на копии боевой инфраструктуры, от 62 900 ₽.</p>"
+requisites_title: "Реквизиты продавца"
+requisites:
+  - label: "Продавец"
+    value: "<span class=\"ph\">[ИП, ФИО ПОЛНОСТЬЮ]</span>"
+  - label: "ИНН"
+    value: "<span class=\"ph\">[ИНН]</span>"
+  - label: "ОГРНИП"
+    value: "<span class=\"ph\">[ОГРНИП]</span>"
+  - label: "Почта"
+    value: "<span class=\"ph\">[EMAIL]</span>"
+  - label: "Документы"
+    value: "<a href=\"/offer/\">Оферта</a> · <a href=\"/privacy/\">Политика персональных данных</a>"
+copyright: "Олег Букатчук"
+bottom:
+  - "Дизайн по мотивам Axis Industrial"
+  - "Структура — PRESA от 31.08.2026"

@@ -1,0 +1,23 @@
+# Лента показателей
+type: "ribbon"
+items:
+  - label: "Позиций в пакете"
+    value: "6"
+    unit: ~
+    fill: "100%"
+  - label: "Разобранных аварий"
+    value: "5"
+    unit: "классов"
+    fill: "70%"
+  - label: "Развилок в протоколе"
+    value: "16"
+    unit: ~
+    fill: "85%"
+  - label: "Встреч в календаре"
+    value: "0"
+    unit: ~
+    fill: "2%"
+  - label: "Нужно времени"
+    value: "1"
+    unit: "вечер"
+    fill: "12%"

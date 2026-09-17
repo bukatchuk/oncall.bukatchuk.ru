@@ -1,0 +1,13 @@
+# ——— Сайт ———
+title: "Дежурство без паники · Протокол дежурного"
+description: "Два продукта о диагностике инцидентов: воркшоп на стенде-двойнике и метод «От симптома к причине» в файлах."
+url: "https://oncall.bukatchuk.ru"
+baseurl: ""
+lang: ru
+
+# ——— Сборка ———
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor

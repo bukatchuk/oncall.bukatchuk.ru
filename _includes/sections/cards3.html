@@ -1,0 +1,35 @@
+<section{% if d.id %} id="{{ d.id }}"{% endif %} class="{% if d.dark %}price {% endif %}{% if d.surface %}sec--surface {% endif %}{% if d.line %}sec--line{% endif %}">
+  <div class="wrap">
+    {%- if d.eyebrow or d.title_html or d.lead %}
+    {%- if d.lead %}
+    <div class="sec__head">
+      <div>{% if d.eyebrow %}<div class="eyebrow rv">{{ d.eyebrow }}</div>{% endif %}<h2 class="rv">{{ d.title_html }}</h2></div>
+      <p class="rv">{{ d.lead }}</p>
+    </div>
+    {%- else %}
+    {% if d.eyebrow %}<div class="eyebrow rv">{{ d.eyebrow }}</div>{% endif %}{% if d.title_html %}<h2 class="rv">{{ d.title_html }}</h2>{% endif %}
+    {%- endif %}
+{%- endif %}
+    <div class="guar">
+      {%- for c in d.cards %}
+      <div class="guar__i{% if c.highlight %} guar__i--hl{% endif %} rv"><b>{{ c.title }}</b>{{ c.text }}</div>
+      {%- endfor %}
+    </div>
+{%- if d.terminal %}
+    <div class="term rv">
+      <div class="term__bar"><i></i><i></i><i></i><span style="margin-left:.6rem">{{ d.terminal.title }}</span></div>
+      <div class="term__body">
+        {%- for p in d.terminal.paragraphs %}
+        <p>{{ p }}</p>
+        {%- endfor %}
+      </div>
+    </div>
+{%- endif %}
+{%- if d.honest %}
+    <div class="honest rv" data-label="{{ d.honest.label }}"><div class="cal__body">{{ d.honest.html }}</div></div>
+{%- endif %}
+{%- if d.cut %}
+    <div class="cut rv" data-label="{{ d.cut.label }}"><div class="cal__body">{{ d.cut.html }}</div></div>
+{%- endif %}
+  </div>
+</section>

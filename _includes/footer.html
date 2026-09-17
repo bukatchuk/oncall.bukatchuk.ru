@@ -1,0 +1,27 @@
+{%- assign key = page.product | default: 'duty' -%}
+{%- assign f = site.data[key].footer -%}
+<footer class="ft">
+  <div class="ft__in">
+    {%- for c in f.columns %}
+    <div><h4>{{ c.title }}</h4>{{ c.html }}</div>
+    {%- endfor %}
+  </div>
+  {%- if f.requisites and f.requisites.size > 0 %}
+  <div class="ft__in" style="margin-top:2rem">
+    <div style="grid-column:1/-1">
+      <h4>{{ f.requisites_title }}</h4>
+      <table class="req">
+        <tbody>
+          {%- for r in f.requisites %}
+          <tr><td>{{ r.label }}</td><td>{{ r.value }}</td></tr>
+          {%- endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+  {%- endif %}
+  <div class="ft__bottom">
+    <span>© <span id="yr">{{ site.time | date: "%Y" }}</span> {{ f.copyright }}</span>
+    {%- for b in f.bottom %}<span>{{ b }}</span>{% endfor %}
+  </div>
+</footer>

@@ -1,0 +1,55 @@
+name: Проверки
+
+on:
+  pull_request:
+    branches: ["main"]
+  push:
+    branches-ignore: ["main"]
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Сборка без публикации
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Build with Jekyll
+        uses: actions/jekyll-build-pages@v1
+        with:
+          source: ./
+          destination: ./_site
+
+      - name: Проверка обязательных файлов
+        run: |
+          set -e
+          test -f _site/index.html || { echo "нет index.html"; exit 1; }
+          test -f _site/protocol/index.html || { echo "нет protocol/index.html"; exit 1; }
+          test -f _site/offer/index.html || { echo "нет offer/index.html"; exit 1; }
+          test -f _site/privacy/index.html || { echo "нет privacy/index.html"; exit 1; }
+          test -f _site/assets/css/main.css || { echo "нет main.css"; exit 1; }
+          test -f _site/CNAME || { echo "нет CNAME"; exit 1; }
+          grep -q "oncall.bukatchuk.ru" _site/CNAME
+          echo "Дежурство: $(wc -c < _site/index.html) байт"
+          echo "Протокол:  $(wc -c < _site/protocol/index.html) байт"
+
+      - name: Поиск незакрытых плейсхолдеров
+        run: |
+          if grep -ho '\[[А-ЯЁ][А-ЯЁ ,/]*\]' _site/index.html _site/protocol/index.html _site/offer/index.html _site/privacy/index.html | sort -u | tee /tmp/ph.txt | grep -q .; then
+            echo "На странице остались плейсхолдеры:"; cat /tmp/ph.txt
+          else
+            echo "Плейсхолдеров нет"
+          fi
+
+      - name: Сайт не должен обращаться к сторонним доменам
+        run: |
+          set -e
+          ext=$(grep -roE 'src="https?://[^"]+"' _site --include=*.html | grep -vE 'https://(oncall\.)?bukatchuk\.ru' || true)
+          if [ -n "$ext" ]; then echo "Страница подгружает файлы со стороннего домена:"; echo "$ext"; exit 1; fi
+          echo "Сторонних src нет"
+          links=$(grep -roE 'url\(https?://[^)]+\)' _site --include=*.css || true)
+          if [ -n "$links" ]; then echo "В CSS есть внешние ресурсы:"; echo "$links"; exit 1; fi
+          echo "Внешних ресурсов в CSS нет"
+          test -d _site/assets/fonts || { echo "нет папки со шрифтами"; exit 1; }
+          echo "Шрифтов в сборке: $(ls _site/assets/fonts/*.woff2 | wc -l)"

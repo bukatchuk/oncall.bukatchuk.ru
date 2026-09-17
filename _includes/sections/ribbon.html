@@ -1,0 +1,9 @@
+<div class="ribbon">
+  {%- for i in d.items %}
+  <div class="ribbon__cell">
+    <div class="ribbon__label">{{ i.label }}</div>
+    <div class="ribbon__value">{{ i.value }}{% if i.unit %}<span class="ribbon__unit">{{ i.unit }}</span>{% endif %}</div>
+    <div class="bar-track"><div class="bar-track__fill" style="width:{{ i.fill }}"></div></div>
+  </div>
+  {%- endfor %}
+</div>

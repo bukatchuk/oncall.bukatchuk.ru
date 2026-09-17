@@ -1,0 +1,36 @@
+<section{% if d.id %} id="{{ d.id }}"{% endif %} class="{% if d.dark %}price {% endif %}{% if d.surface %}sec--surface {% endif %}{% if d.line %}sec--line{% endif %}">
+  <div class="wrap">
+    {%- if d.eyebrow %}<div class="eyebrow rv">{{ d.eyebrow }}</div>{% endif %}
+    {%- if d.title_html %}<h2 class="rv"{% if d.title_narrow %} style="max-width:20ch"{% endif %}>{{ d.title_html }}</h2>{% endif %}
+    {%- for part in d.layout %}
+    {%- case part %}
+    {%- when 'table' %}
+    <table class="sum rv">
+      <tbody>
+        {%- for r in d.rows %}
+        <tr{% if r.total %} class="total"{% endif %}><td>{{ r.text }}</td><td>{{ r.value }}</td></tr>
+        {%- endfor %}
+      </tbody>
+    </table>
+    {%- when 'columns' %}
+    <div class="price__cols">
+      {%- for c in d.columns %}
+      <div class="price__c rv"><h3>{{ c.title }}</h3><p>{{ c.text }}</p></div>
+      {%- endfor %}
+    </div>
+    {%- when 'old' %}<div class="price__old rv">{{ d.old }}</div>
+    {%- when 'big' %}<div class="price__big rv">{{ d.big }}</div>
+    {%- when 'lead' %}<p class="lead rv" style="opacity:.86">{{ d.lead2 }}</p>
+    {%- when 'save' %}
+    <div class="save">
+      {%- for s in d.save %}
+      <div class="rv"><b>{{ s.value }}</b><span>{{ s.label }}</span></div>
+      {%- endfor %}
+    </div>
+    {%- when 'button' %}
+    <div class="btns rv" style="margin-top:2.4rem"><a class="btn btn--primary" href="{{ d.button.href }}">{{ d.button.html }}</a></div>
+    {%- endcase %}
+    {%- endfor %}
+    {%- if d.honest %}<div class="honest rv" data-label="{{ d.honest.label }}"><div class="cal__body">{{ d.honest.html }}</div></div>{% endif %}
+  </div>
+</section>

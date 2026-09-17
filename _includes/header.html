@@ -1,0 +1,21 @@
+{%- assign s = site.data.site -%}
+{%- assign key = page.product | default: 'duty' -%}
+{%- assign p = site.data.site[key] -%}
+<header class="hdr">
+  <div class="hdr__in">
+    <a href="{{ '/' | relative_url }}" class="hdr__logo">
+      <img class="hdr__mark" src="{{ '/assets/img/logo.png' | relative_url }}" alt="" width="22" height="22">
+      {{ s.logo_text }}
+    </a>
+    <span class="hdr__sep"></span>
+    <span class="hdr__sub">{{ p.header_sub }}</span>
+    <nav class="hdr__nav" id="nav">
+      {%- for l in p.nav %}<a href="{{ l.href }}">{{ l.text }}</a>{% endfor %}
+    </nav>
+    <div class="hdr__right">
+      <div class="hdr__status"><span class="dot"></span><span>{{ p.header_status }}</span></div>
+      <div class="hdr__clock" id="clock">--:--:-- MSK</div>
+    </div>
+    <button class="burger" id="burger" aria-label="Меню" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>

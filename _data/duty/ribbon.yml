@@ -1,0 +1,23 @@
+# Лента показателей
+type: "ribbon"
+items:
+  - label: "Аварий на стенде"
+    value: "10"
+    unit: ~
+    fill: "100%"
+  - label: "Формат"
+    value: "48"
+    unit: "часов"
+    fill: "60%"
+  - label: "Личных разборов"
+    value: "2"
+    unit: "сессии"
+    fill: "40%"
+  - label: "Сопровождение после"
+    value: "30"
+    unit: "дней"
+    fill: "80%"
+  - label: "Опыт автора"
+    value: "19"
+    unit: "лет"
+    fill: "95%"

@@ -1,0 +1,13 @@
+<section class="cta" {% if d.id %}id="{{ d.id }}" {% endif %}style="text-align:left;border-top:0">
+  <div class="wrap">
+    <div class="eyebrow" style="color:#fff;opacity:.85">{{ d.eyebrow }}</div>
+    <div class="disq">
+      <h2 class="rv">{{ d.title }}</h2>
+      <div class="rv">
+        {%- for p in d.paragraphs %}
+        <p{% unless forloop.first %} style="margin-top:1rem"{% endunless %}>{{ p }}</p>
+        {%- endfor %}
+      </div>
+    </div>
+  </div>
+</section>

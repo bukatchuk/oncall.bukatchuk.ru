@@ -1,0 +1,23 @@
+{%- assign data = site.data[include.page] -%}
+{%- for name in data._order.blocks -%}
+{%- assign d = data[name] -%}
+{%- case d.type -%}
+{%- when 'hero' %}{% include sections/hero.html d=d %}
+{%- when 'ribbon' %}{% include sections/ribbon.html d=d %}
+{%- when 'ticker' %}{% include sections/ticker.html d=d %}
+{%- when 'specs' %}{% include sections/specs.html d=d %}
+{%- when 'beats' %}{% include sections/beats.html d=d %}
+{%- when 'bento' %}{% include sections/bento.html d=d %}
+{%- when 'cards3' %}{% include sections/cards3.html d=d %}
+{%- when 'questions' %}{% include sections/questions.html d=d %}
+{%- when 'terminal' %}{% include sections/terminal.html d=d %}
+{%- when 'sumtable' %}{% include sections/sumtable.html d=d %}
+{%- when 'price' %}{% include sections/price.html d=d %}
+{%- when 'feats' %}{% include sections/feats.html d=d %}
+{%- when 'tariffs' %}{% include sections/tariffs.html d=d %}
+{%- when 'proof' %}{% include sections/proof.html d=d %}
+{%- when 'ps' %}{% include sections/ps.html d=d %}
+{%- when 'cta' %}{% include sections/cta.html d=d %}
+{%- when 'disq' %}{% include sections/disq.html d=d %}
+{%- endcase -%}
+{%- endfor -%}

@@ -1,0 +1,28 @@
+# Подвал страницы «Дежурство»
+columns:
+  - title: "Воркшоп"
+    html: "<p><a href=\"#what\">Что внутри</a><br><a href=\"#diff\">Отличие от рынка</a><br><a href=\"#tar\">Тарифы</a><br><a href=\"#guar\">Гарантия</a></p>"
+  - title: "Автор"
+    html: "<p><a href=\"https://habr.com/ru/articles/1078876/\" target=\"_blank\" rel=\"noopener\">Разбор аварии на Хабре</a><br><a href=\"https://github.com/olegbukatchuk\" target=\"_blank\" rel=\"noopener\">github.com/olegbukatchuk</a><br><a href=\"https://t.me/bukatchuk\" target=\"_blank\" rel=\"noopener\">t.me/bukatchuk</a></p>"
+  - title: "Документы"
+    html: "<p><span class=\"ph\">[ИП / ИНН / ОГРНИП]</span><br><a href=\"/offer/\">Оферта</a><br><a href=\"/privacy/\">Политика персональных данных</a></p>"
+  - title: "Другой продукт"
+    html: "<p>Нужен только метод, без стенда — <a href=\"/protocol/\">«Протокол дежурного», 19 900 ₽</a>. Засчитывается сюда в течение 30 дней.</p>"
+requisites_title: "Реквизиты продавца"
+requisites:
+  - label: "Продавец"
+    value: "<span class=\"ph\">[ИП, ФИО ПОЛНОСТЬЮ]</span>"
+  - label: "ИНН"
+    value: "<span class=\"ph\">[ИНН]</span>"
+  - label: "ОГРНИП"
+    value: "<span class=\"ph\">[ОГРНИП]</span>"
+  - label: "Расчётный счёт"
+    value: "<span class=\"ph\">[Р/С, БАНК, БИК]</span>"
+  - label: "Почта"
+    value: "<span class=\"ph\">[EMAIL]</span>"
+  - label: "Документы"
+    value: "<a href=\"/offer/\">Оферта</a> · <a href=\"/privacy/\">Политика персональных данных</a>"
+copyright: "Олег Букатчук"
+bottom:
+  - "Дизайн по мотивам Axis Industrial"
+  - "Структура — PRESA от 30.08.2026, четыре прогона стресс-теста"

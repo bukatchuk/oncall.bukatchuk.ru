@@ -1,0 +1,39 @@
+# Тип блока: sumtable
+eyebrow: "// Давайте подытожим"
+title_html: "Что входит в «Оптимальный»"
+surface: true
+line: true
+type: "sumtable"
+rows:
+  - text: "Инцидент-симулятор «10 дежурств за уикенд»"
+    value: "входит"
+    check: false
+    total: false
+  - text: "Изолированный стенд-двойник"
+    value: "входит"
+    check: false
+    total: false
+  - text: "Входная диагностика и персональная карта развития"
+    value: "входит"
+    check: false
+    total: false
+  - text: "Точечные модули под ваши пробелы"
+    value: "входит"
+    check: false
+    total: false
+  - text: "Постмортем-протокол «От симптома к причине»"
+    value: "входит"
+    check: false
+    total: false
+  - text: "1:1 разбор вашего решения с экспертом — две сессии"
+    value: "входит"
+    check: false
+    total: false
+  - text: "Шесть бонусов, включая тридцать дней сопровождения"
+    value: "входит"
+    check: false
+    total: false
+  - text: "Собрать это по частям на рынке — 427 000 ₽. Ваша цена"
+    value: "69 900 ₽"
+    check: false
+    total: true

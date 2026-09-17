@@ -1,0 +1,7 @@
+<section class="{% if d.line %}sec--line{% endif %}">
+  <div class="wrap psblock">
+    {%- for r in d.rows %}
+    <div class="ps__row"><div class="ps__lbl">{{ r.label }}</div><div class="ps__txt"><p class="rv">{{ r.text }}</p></div></div>
+    {%- endfor %}
+  </div>
+</section>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: 'ru' }}">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ page.title | default: site.title }}</title>
+<meta name="description" content="{{ page.description | default: site.description }}">
+<link rel="canonical" href="{{ site.url }}{{ page.url }}">
+<meta property="og:type" content="website">
+<meta property="og:title" content="{{ page.title | default: site.title }}">
+<meta property="og:description" content="{{ page.description | default: site.description }}">
+<meta property="og:url" content="{{ site.url }}{{ page.url }}">
+<link rel="icon" href="{{ '/assets/img/favicon.ico' | relative_url }}" sizes="any">
+<link rel="apple-touch-icon" href="{{ '/assets/img/logo.png' | relative_url }}">
+<script>document.documentElement.className+=' js';</script>
+<link rel="preload" href="{{ '/assets/fonts/jetbrains-mono-cyrillic.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+</head>
+<body class="p-{{ page.product | default: 'duty' }}">
+
+{% include header.html %}
+
+{{ content }}
+
+{% include footer.html %}
+
+<script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+</body>
+</html>

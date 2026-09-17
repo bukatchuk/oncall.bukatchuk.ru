@@ -1,0 +1,26 @@
+# Тип блока: proof
+eyebrow: "// Вместо отзывов"
+title_html: "Разбор реальной аварии"
+lead: "Отзывов выпускников у меня пока нет, и выдумывать их я не стану. Вместо них — открытый разбор, по которому видно метод в работе."
+id: "proof"
+type: "proof"
+items:
+  - title: "Ведёт Олег Букатчук"
+    html: "DevOps/SRE-инженер, 19 лет в эксплуатации. cian.ru, aliexpress.ru, mos.ru — каждый проект больше миллиона пользователей в день."
+  - title: "Все десять сценариев — из личной практики"
+    html: "Ни один не опубликован: это не пересказ чужих постмортемов с Хабра."
+  - title: "Проверить, не спрашивая разрешения"
+    html: "<a href=\"https://github.com/olegbukatchuk\" target=\"_blank\" rel=\"noopener\">github.com/olegbukatchuk</a> и интервью <a href=\"https://youtu.be/UruvjXoRFZw?si=ADRNDOQc5jFClvuv&t=556\" target=\"_blank\" rel=\"noopener\">«Как хорошо больше не писать код»</a> на «Мы обречены» — десять минут с нужного места."
+image:
+  href: "https://youtu.be/UruvjXoRFZw?si=ADRNDOQc5jFClvuv&t=556"
+  src: "interview-youtube.jpg"
+  alt: "Страница выпуска интервью на YouTube: 30 тыс. просмотров"
+terminal:
+  title: "incident — все компоненты зелёные, а продакшн лежит"
+  paragraphs:
+    - "<span class=\"c\">$</span> <span class=\"g\">postmortem</span> --case=firewall"
+    - "<b>Симптом.</b> Приложение не отвечает. Метрики базы полностью зелёные, все компоненты в норме, мониторинг молчит."
+    - "<b>Что оказалось.</b> Потеряна сетевая связность между новым облаком и основным дата-центром: собственные правила файрвола, применённые пайплайном. Кеш какое-то время маскировал отказ и удлинил диагностику."
+    - "<span class=\"a\">Диагностика заняла втрое больше времени, чем устранение.</span> Ответ лежал в истории изменений инфраструктуры, куда за первые пятнадцать минут не посмотрел никто."
+    - "<span class=\"c\"># вывод, который переносится:</span> при инфраструктуре как код вопрос «что изменилось за последний час» адресуется git, а не людям в чате."
+    - "<span class=\"c\">$</span> <span class=\"g\">open</span> <a href=\"https://habr.com/ru/articles/1078876/\" target=\"_blank\" rel=\"noopener\" style=\"color:var(--term-green);text-decoration:underline\">habr.com/ru/articles/1078876</a> <span class=\"c\"># ~10 000 читателей</span>"

@@ -1,0 +1,5 @@
+<div class="ticker" aria-hidden="true">
+  <div class="ticker__row">
+    {%- for n in (1..2) %}{% for i in d.items %}<span>{{ i }}</span><b>/</b>{% endfor %}{% endfor %}
+  </div>
+</div>

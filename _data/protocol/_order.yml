@@ -1,0 +1,18 @@
+# Порядок блоков страницы. Поменять местами — поменять порядок на сайте.
+blocks:
+  - "hero"
+  - "ribbon"
+  - "ticker"
+  - "disqualifier"
+  - "point-a"
+  - "beats"
+  - "deliverables"
+  - "value-questions"
+  - "details"
+  - "price"
+  - "guarantee"
+  - "proof"
+  - "deadline"
+  - "ps"
+  - "upsell"
+  - "cta"

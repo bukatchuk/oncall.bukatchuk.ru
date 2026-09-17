@@ -1,0 +1,13 @@
+<section class="cta"{% if d.id %} id="{{ d.id }}"{% endif %}>
+  <div class="wrap">
+    {%- if d.eyebrow %}<div class="eyebrow" style="color:#fff;opacity:.85">{{ d.eyebrow }}</div>{% endif %}
+    <h2 class="rv">{{ d.title }}</h2>
+    <p class="rv">{{ d.text }}</p>
+    {%- if d.button %}
+    <div class="btns rv" style="justify-content:center"><a class="btn" href="{{ d.button.href }}">{{ d.button.html }}</a></div>
+    {%- endif %}
+    {%- if d.cut %}
+    <div class="cut rv" data-label="{{ d.cut.label }}"><div class="cal__body">{{ d.cut.html }}</div></div>
+    {%- endif %}
+  </div>
+</section>
