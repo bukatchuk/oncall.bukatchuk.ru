@@ -8,7 +8,7 @@ columns:
   - title: "Автор"
     html: "<p><a href=\"https://habr.com/ru/articles/1078876/\" target=\"_blank\" rel=\"noopener\">Разбор аварии на Хабре</a><br><a href=\"https://github.com/olegbukatchuk\" target=\"_blank\" rel=\"noopener\">github.com/olegbukatchuk</a><br><a href=\"https://t.me/bukatchuk\" target=\"_blank\" rel=\"noopener\">t.me/bukatchuk</a></p>"
   - title: "Документы"
-    html: "<p>ИП Букатчук О. В., ИНН 860804117993, ОГРНИП 320508100070503<br><a href=\"/offer/\">Оферта</a><br><a href=\"/privacy/\">Политика персональных данных</a></p>"
+    html: "<p>ИП Букатчук О. В.<br>ИНН 860804117993, ОГРНИП 320508100070503<br><a href=\"/offer/\">Оферта</a><br><a href=\"/privacy/\">Политика персональных данных</a></p>"
 copyright: "Олег Букатчук"
 bottom:
   - "Дизайн по мотивам Axis Industrial"
