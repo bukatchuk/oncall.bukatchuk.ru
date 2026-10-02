@@ -1,5 +1,4 @@
-{%- assign key = page.product | default: 'duty' -%}
-{%- assign f = site.data[key].footer -%}
+{%- assign f = site.data.footer -%}
 <footer class="ft">
   <div class="ft__in">
     {%- for c in f.columns %}

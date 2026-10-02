@@ -553,7 +553,7 @@ section > .wrap > :last-child{margin-bottom:0}
 .disq{display:grid;grid-template-columns:minmax(280px,.9fr) 1.1fr;gap:1.6rem 3rem;align-items:start;margin-top:.6rem}
 .disq h2{margin:0;color:#fff;max-width:none}
 .disq p{margin:0}
-@media (max-width:900px){.disq{grid-template-columns:1fr}
+@media (max-width:900px){.disq{grid-template-columns:1fr}}
 .p-protocol .hero h1{font-size:clamp(2.06rem,6.83vw,6.66rem)}
 /* ---- страницы документов (оферта, политика) ---- */
 /* ============ ТЕКСТОВЫЕ СТРАНИЦЫ (оферта, политика) ============ */

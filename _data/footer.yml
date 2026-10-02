@@ -1,13 +1,14 @@
-# Подвал страницы «Дежурство»
+# Подвал — один на весь сайт: обе продуктовые страницы, оферта и политика.
+# Правится только здесь, иначе страницы снова разъедутся.
 columns:
-  - title: "Воркшоп"
-    html: "<p><a href=\"#what\">Что внутри</a><br><a href=\"#diff\">Отличие от рынка</a><br><a href=\"#tar\">Тарифы</a><br><a href=\"#guar\">Гарантия</a></p>"
+  - title: "Дежурство без паники"
+    html: "<p><a href=\"/#what\">Что внутри</a><br><a href=\"/#diff\">Отличие от рынка</a><br><a href=\"/#tar\">Тарифы</a><br><a href=\"/#guar\">Гарантия</a></p>"
+  - title: "Протокол дежурного"
+    html: "<p><a href=\"/protocol/#what\">Что внутри</a><br><a href=\"/protocol/#price\">Цена</a><br><a href=\"/protocol/#guar\">Гарантия</a><br><a href=\"/protocol/#who\">Кому не нужно</a></p>"
   - title: "Автор"
     html: "<p><a href=\"https://habr.com/ru/articles/1078876/\" target=\"_blank\" rel=\"noopener\">Разбор аварии на Хабре</a><br><a href=\"https://github.com/olegbukatchuk\" target=\"_blank\" rel=\"noopener\">github.com/olegbukatchuk</a><br><a href=\"https://t.me/bukatchuk\" target=\"_blank\" rel=\"noopener\">t.me/bukatchuk</a></p>"
   - title: "Документы"
     html: "<p>ИП Букатчук О. В., ИНН 860804117993, ОГРНИП 320508100070503<br><a href=\"/offer/\">Оферта</a><br><a href=\"/privacy/\">Политика персональных данных</a></p>"
-  - title: "Другой продукт"
-    html: "<p>Нужен только метод, без стенда — <a href=\"/protocol/\">«Протокол дежурного», 19 900 ₽</a>. Засчитывается сюда в течение 30 дней.</p>"
 requisites_title: "Реквизиты продавца"
 requisites:
   - label: "Продавец"
